@@ -1,0 +1,53 @@
+$mainColor: #008080;
+$secondarColor: azure;
+.footer {
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  background-color: $secondarColor;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  h2 {
+    margin-bottom: 100px;
+    font-weight: 600;
+    font-size: 32px;
+    color: teal;
+  }
+  .github {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    img {
+      border-radius: 5px;
+    }
+    .person {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px;
+      span {
+        font-weight: normal;
+        font-size: 18px;
+      }
+      .buttons {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+  .copyright {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 20%;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+}

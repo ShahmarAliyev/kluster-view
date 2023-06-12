@@ -1,0 +1,32 @@
+$mainColor: #008080;
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  height: 60px;
+  width: 100%;
+  color: white;
+  background-color: $mainColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .logo {
+    margin-left: 50px;
+  }
+  .options {
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    a:visited {
+      text-decoration: none;
+      color: white;
+    }
+    margin-right: 50px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+}

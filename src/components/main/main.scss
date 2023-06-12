@@ -1,0 +1,34 @@
+$mainColor: #008080;
+$secondaryColor: azure;
+.main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   background-color: #008080;
+  flex-direction: column;
+  .logo {
+    margin-bottom: 50px;
+  }
+  .desc {
+    background-color: $secondaryColor;
+    height: 10%;
+    width: 30%;
+    text-align: center;
+    h1 {
+      color: rgb(53, 78, 72);
+      font-weight: normal;
+    }
+  }
+  button {
+    margin-top: 20px;
+    height: 35px;
+    width: 160px;
+    border: none;
+    border-radius: 5px;
+    background-color: teal;
+    color: white;
+    letter-spacing: 0.02cm;
+  }
+}

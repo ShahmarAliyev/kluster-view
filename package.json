@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "next": "13.4.5",
+    "node-sass": "^9.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.63.3",
     "scss": "^0.2.4"
   }
 }
