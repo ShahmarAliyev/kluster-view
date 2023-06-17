@@ -4,7 +4,7 @@
   position: fixed;
   z-index: 10;
   height: 70px;
-  width: 100%;
+  width: auto;
   padding: 0px 50px;
   display: flex;
   align-items: center;
@@ -17,12 +17,10 @@
     }
   }
   @include mobile {
-    width: 390px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0;
-    gap: 0;
+    justify-content: space-between;
+    gap: 50px;
   }
   .burger {
     display: none;
@@ -52,6 +50,8 @@
     }
     &.active {
       @include mobile {
+        right: 0px;
+        top: 10px;
       }
     }
   }
