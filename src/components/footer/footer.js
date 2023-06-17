@@ -1,6 +1,7 @@
 import React from 'react';
 import './footer.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 const Footer = () => {
   return (
     <div id='team' className='footer'>
@@ -10,8 +11,12 @@ const Footer = () => {
           <span>Jonathan Tsai</span>
           <Image alt='' src='/img/john.png' width={200} height={200} />
           <div className='buttons'>
-            <Image alt='' src='/img/github.png' width={32} height={32} />
-            <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+            <Link href='https://github.com/jonathantsai1995'>
+              <Image alt='' src='/img/github.png' width={32} height={32} />
+            </Link>
+            <Link href='https://github.com/jonathantsai1995'>
+              <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+            </Link>
           </div>
         </div>
         <div className='person'>
@@ -19,8 +24,12 @@ const Footer = () => {
 
           <Image alt='' src='/img/kyle.png' width={200} height={200} />
           <div className='buttons'>
-            <Image alt='' src='/img/github.png' width={32} height={32} />
-            <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+            <Link href='https://github.com/kyleslugg'>
+              <Image alt='' src='/img/github.png' width={32} height={32} />
+            </Link>
+            <Link href='https://www.linkedin.com/in/kyle-slugg/'>
+              <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+            </Link>
           </div>
         </div>{' '}
         <div className='person'>
@@ -28,17 +37,24 @@ const Footer = () => {
 
           <Image alt='' src='/img/mike.png' width={200} height={200} />
           <div className='buttons'>
-            <Image alt='' src='/img/github.png' width={32} height={32} />
-            <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+            <Link href='https://github.com/24juice22'>
+              <Image alt='' src='/img/github.png' width={32} height={32} />
+            </Link>
+            <Link href='https://github.com/24juice22'>
+              <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+            </Link>
           </div>
-        </div>{' '}
+        </div>
         <div className='person'>
           <span>Shahmar Aliyev</span>
-
           <Image alt='' src='/img/shahmar.png' width={200} height={200} />
           <div className='buttons'>
-            <Image alt='' src='/img/github.png' width={32} height={32} />
-            <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+            <Link href='https://github.com/ShahmarAliyev'>
+              <Image alt='' src='/img/github.png' width={32} height={32} />
+            </Link>
+            <Link href='https://www.linkedin.com/in/shahmaraliyev/'>
+              <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+            </Link>
           </div>
         </div>
       </div>

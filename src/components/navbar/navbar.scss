@@ -1,32 +1,103 @@
-$mainColor: #008080;
+@import '../../app/variables';
 
 .navbar {
   position: fixed;
   z-index: 10;
-  height: 60px;
+  height: 70px;
   width: 100%;
-  color: white;
-  background-color: $mainColor;
+  padding: 0px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: $barGr;
+  position: relative;
+  &.active {
+    .burgerIcon {
+      display: none;
+    }
+  }
+  @include mobile {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    gap: 0;
+  }
+  .burger {
+    display: none;
+    color: $mainColor;
+    position: absolute;
+    border: 1px solid $mainColor;
+    right: 10px;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    top: 0;
+    width: 90px;
+    gap: 10px;
+    color: $mainColor;
+    padding: 5px 20px;
+    border-radius: 5px;
+    a,
+    a:visited {
+      color: $mainColor;
+      text-decoration: none;
+    }
+    &.false {
+      display: none;
+    }
+    &.active {
+      @include mobile {
+      }
+    }
+  }
+  .burgerIcon {
+    display: flex;
+    @include mobile {
+      margin-right: 60px;
+    }
+  }
+
   .logo {
     margin-left: 50px;
+    cursor: pointer;
+    flex: 8 1 auto;
   }
   .options {
-    a {
-      text-decoration: none;
-      color: white;
+    @include mobile {
+      &:nth-child(2) {
+        display: none;
+      }
     }
+    a,
     a:visited {
+      width: 100%;
+      color: $mainColor;
       text-decoration: none;
-      color: white;
+      width: 90px;
     }
-    margin-right: 50px;
-    width: 20%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 20px;
+    margin-right: 40px;
+    .menus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10;
+      .startNav {
+        margin-right: 20px;
+      }
+    }
+    .logos {
+      img {
+        margin: 0 20px;
+      }
+    }
+    flex: 1 1 auto;
   }
 }

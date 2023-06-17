@@ -10,16 +10,18 @@ const Demo = () => {
         </div>
         <div className='desc'>
           <h2>
-            Checkout Important Kluster Metrics In Your Kubernetes Cluster.
-            Monitor Specific Pods and identify any bottlenecks
+            Checkout Important Metrics In Your Kubernetes Cluster. Monitor Pod
+            and Kluster level CPU and Memory Usage, Pod Status, Number of
+            Replicas, Ip Adresses and identify any bottlenecks
           </h2>
         </div>
       </div>
       <div className='demo1'>
         <div className='desc'>
           <h2>
-            Checkout Important Kluster Metrics In Your Kubernetes Cluster.
-            Monitor Specific Pods and identify any bottlenecks
+            Checkout Important Metrics In Your Kubernetes Cluster. Monitor Pod
+            and Kluster level CPU and Memory Usage, Pod Status, Number of
+            Replicas, Ip Adresses and identify any bottlenecks
           </h2>
         </div>
         <div className='gif1'>

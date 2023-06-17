@@ -1,27 +1,35 @@
-$mainColor: #008080;
-$secondarColor: azure;
+@import '../../app/variables';
+
 .footer {
   position: relative;
-  height: 70vh;
+  height: 75vh;
   width: 100%;
-  background-color: $secondarColor;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  color: $secondaryColor;
+  color: $mainColor;
   h2 {
     margin-bottom: 100px;
     font-weight: 600;
     font-size: 32px;
-    color: teal;
+    color: $secondaryColor;
+    color: $mainColor;
   }
   .github {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+    }
     img {
       border-radius: 5px;
+      background-color: $secondaryColor;
     }
     .person {
       display: flex;
@@ -47,7 +55,13 @@ $secondarColor: azure;
     justify-content: center;
     flex-direction: column;
     width: 20%;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-size: 14px;
+    @include mobile {
+      padding: 20px 0px;
+      width: 80%;
+      top: 0px;
+      position: relative;
+    }
   }
 }

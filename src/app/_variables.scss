@@ -1,0 +1,15 @@
+$mainColor: #00ffff;
+$secondaryColor: azure;
+$bgGradient: linear-gradient(top to bottom, black, grey);
+$mainBg: rgba(135, 136, 148, 1);
+$mainGradient: linear-gradient(0deg, #3d3d43, rgba(1, 1, 1, 1));
+// $barBg: rgba(1, 1, 1, 0.3);
+$barGr: linear-gradient(180deg, #3d3d43, #010101);
+$bgColor: #3d3d43;
+
+$width: 768px;
+@mixin mobile {
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}

@@ -1,24 +1,45 @@
-$mainColor: #008080;
-$secondaryColor: azure;
+@import '../../app/variables';
+
 .main {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  //   background-color: #008080;
   flex-direction: column;
+  background: $mainBg;
+  background: $mainGradient;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
   .logo {
     margin-bottom: 50px;
   }
   .desc {
-    background-color: $secondaryColor;
-    height: 10%;
+    // background-color: $secondaryColor;
+    background: $barGr;
+    height: 8%;
     width: 30%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid $mainColor;
+    @include mobile {
+      width: 80%;
+    }
     h1 {
-      color: rgb(53, 78, 72);
+      color: $mainColor;
       font-weight: normal;
+
+      @include mobile {
+        font-size: 24px;
+      }
     }
   }
   button {
@@ -27,8 +48,13 @@ $secondaryColor: azure;
     width: 160px;
     border: none;
     border-radius: 5px;
-    background-color: teal;
-    color: white;
+    background-color: $mainColor;
+    color: #000000;
     letter-spacing: 0.02cm;
+    a,
+    a:visited {
+      text-decoration: none;
+      color: black;
+    }
   }
 }
