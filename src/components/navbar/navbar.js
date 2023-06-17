@@ -6,13 +6,7 @@ import Image from 'next/image';
 const Navbar = () => {
   const [drowDown, setDrowDown] = useState(false);
   return (
-    <div
-      onMouseMove={() => {
-        console.log('move test');
-        setDrowDown(!drowDown);
-      }}
-      className={'navbar ' + (drowDown && 'active')}
-    >
+    <div className={'navbar ' + (drowDown && 'active')}>
       <div className='logo'>
         <Image src='/img/navlogo.png' width={40} height={40} alt='' />
       </div>
