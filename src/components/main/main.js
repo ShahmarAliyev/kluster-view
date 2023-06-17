@@ -6,16 +6,33 @@ const Main = () => {
   return (
     <div id='home' className='main'>
       <div className='logo'>
-        <Image alt='' src='/img/test.png' width={300} height={200} />
+        <Image
+          className='logoImg'
+          alt=''
+          src='/img/LOGO.png'
+          // width={450}
+          // height={430}
+          style={{ objectFit: 'contain' }}
+          fill={true}
+        />
       </div>
       <div className='desc'>
         <h1>Kubernetes Visualization Tool</h1>
+        <p>
+          Visualize, Monitor, and Optimize Kubernetes Clusters with our Powerful
+          Visualization Tool.
+        </p>
+        <div className='buttons'>
+          <button>
+            <Link href='https://github.com/oslabs-beta/KlusterView'>
+              Get Started
+            </Link>
+          </button>
+          <button>
+            <Link href='#demo'>See a Demo</Link>
+          </button>
+        </div>
       </div>
-      <button>
-        <Link href='https://github.com/oslabs-beta/KlusterView'>
-          Get Started
-        </Link>
-      </button>
     </div>
   );
 };

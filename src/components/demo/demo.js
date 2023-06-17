@@ -6,7 +6,7 @@ const Demo = () => {
     <div id='demo' className='demo'>
       <div className='demo1'>
         <div className='gif1'>
-          <Image alt='' src='/img/resr.gif' width={800} height={500} />
+          <Image alt='' src='/img/kluster.gif' width={800} height={500} />
         </div>
         <div className='desc'>
           <h2>
@@ -25,7 +25,7 @@ const Demo = () => {
           </h2>
         </div>
         <div className='gif1'>
-          <Image alt='' src='/img/resr.gif' width={800} height={500} />
+          <Image alt='' src='/img/status.gif' width={800} height={500} />
         </div>
       </div>
     </div>

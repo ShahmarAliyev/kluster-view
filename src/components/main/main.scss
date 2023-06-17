@@ -6,10 +6,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   background: $mainBg;
   background: $mainGradient;
-
+  gap: 150px;
   @include mobile {
     flex-direction: column;
     align-items: center;
@@ -17,29 +16,71 @@
     gap: 50px;
   }
   .logo {
+    position: relative;
+    width: 550px;
+    height: 5100px;
     margin-bottom: 50px;
+    @include mobile {
+      margin-top: 100px;
+      width: 450px;
+      height: 420px;
+    }
   }
   .desc {
-    // background-color: $secondaryColor;
-    background: $barGr;
-    height: 8%;
+    height: 60%;
     width: 30%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    border: 1px solid $mainColor;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 225px;
+    // background-color: blanchedalmond;
+
     @include mobile {
       width: 80%;
+      align-items: center;
     }
     h1 {
-      color: $mainColor;
+      background-image: linear-gradient(45deg, $mainColor, #929292);
+      background-size: 100%;
+      background-clip: border-box;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      margin: 0;
       font-weight: normal;
+      font-size: 64px;
+      text-align: start;
 
       @include mobile {
         font-size: 24px;
+        text-align: center;
       }
+    }
+    p {
+      color: white;
+      font-size: 16px;
+      line-height: 0.7cm;
+      letter-spacing: 0.015cm;
+      font-weight: 400;
+      text-align: left;
+      @include mobile {
+        text-align: center;
+      }
+    }
+
+    .buttons {
+      // background-color: #929292;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
     }
   }
   button {
@@ -55,6 +96,11 @@
     a:visited {
       text-decoration: none;
       color: black;
+    }
+
+    @include mobile {
+      width: 120px;
+      height: 30px;
     }
   }
 }

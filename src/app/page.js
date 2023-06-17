@@ -4,6 +4,7 @@ import Main from '@/components/main/main';
 import Demo from '@/components/demo/demo';
 import GetStarted from '@/components/getStarted/getStarted';
 import './page.scss';
+import Image from 'next/image';
 export default function Home() {
   return (
     <main>

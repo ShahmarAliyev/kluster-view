@@ -24,7 +24,13 @@ const GetStarted = () => {
           }}
           className='imgWrapper'
         >
-          <Image src='/img/copy.png' alt='' height={24} width={24} />
+          <Image
+            src='/img/copy.png'
+            alt=''
+            height={24}
+            width={24}
+            style={{ objectFit: 'cover' }}
+          />
         </div>
       </div>
       <p>Scripts</p>
@@ -36,7 +42,7 @@ const GetStarted = () => {
       <p>Open Browser</p>
       <span>
         KlusterView will run on Port 31001 of each node. To display the
-        application, access this port directly via your web browser,
+        application, access this port via your web browser.
       </span>
 
       <p>Development</p>

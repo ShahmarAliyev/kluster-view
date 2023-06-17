@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 40px;
   color: $mainColor;
+  margin-bottom: 100px;
 
   @include mobile {
     margin-bottom: 400px;
@@ -45,6 +46,9 @@
     color: $secondaryColor;
     font-size: 18px;
     font-weight: 400;
+    @include mobile {
+      padding-left: 10px;
+    }
   }
   .code {
     width: 50%;
