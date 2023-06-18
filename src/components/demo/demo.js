@@ -19,9 +19,10 @@ const Demo = () => {
       <div className='demo1'>
         <div className='desc'>
           <h2>
-            Checkout Important Metrics In Your Kubernetes Cluster. Monitor Pod
-            and Kluster level CPU and Memory Usage, Pod Status, Number of
-            Replicas, Ip Adresses and identify any bottlenecks
+            The node graph visualization provides up-to-the-minute information
+            on the status of pods, including their namespace, pod IP, host, and
+            job details. This immediate data availability empowers users to make
+            informed decisions and efficiently manage their distributed system.
           </h2>
         </div>
         <div className='gif1'>
