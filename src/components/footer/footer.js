@@ -14,7 +14,7 @@ const Footer = () => {
             <Link href='https://github.com/jonathantsai1995'>
               <Image alt='' src='/img/github.png' width={32} height={32} />
             </Link>
-            <Link href='https://github.com/jonathantsai1995'>
+            <Link href='https://www.linkedin.com/in/jonathan-tsai95/'>
               <Image alt='' src='/img/linkedin.png' width={32} height={32} />
             </Link>
           </div>
@@ -40,7 +40,7 @@ const Footer = () => {
             <Link href='https://github.com/24juice22'>
               <Image alt='' src='/img/github.png' width={32} height={32} />
             </Link>
-            <Link href='https://github.com/24juice22'>
+            <Link href='https://www.linkedin.com/in/mikenunn22/'>
               <Image alt='' src='/img/linkedin.png' width={32} height={32} />
             </Link>
           </div>

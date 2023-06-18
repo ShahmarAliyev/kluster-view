@@ -56,8 +56,10 @@
     }
   }
   .burgerIcon {
-    display: flex;
+    display: none;
+    // display: flex;
     @include mobile {
+      display: flex;
       margin-right: 60px;
     }
   }
