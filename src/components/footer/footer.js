@@ -21,7 +21,7 @@ const Footer = () => {
               <Image alt='' src='/img/githubNav.png' width={32} height={32} />
             </Link>
             <Link href='https://www.linkedin.com/in/jonathan-tsai95/'>
-              <Image alt='' src='/img/linkedin.png' width={32} height={32} />
+              <Image alt='' src='/img/linkedinNav.png' width={32} height={32} />
             </Link>
           </div>
         </div>
