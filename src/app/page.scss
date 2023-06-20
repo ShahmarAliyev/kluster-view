@@ -3,7 +3,6 @@
 *,
 html {
   scroll-behavior: smooth !important;
-  // overflow-x: hidden;
   @include mobile {
     margin: 0;
     padding: 0;
@@ -13,12 +12,10 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: $bgColor;
   font-family: 'Roboto';
-  width: 100%;
   position: relative;
-  // margin: 0;
-  // padding: 0;
+  margin: 0;
   scroll-behavior: smooth;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   @include mobile {
     margin: 0;
     padding: 0;

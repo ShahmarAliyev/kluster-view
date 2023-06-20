@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className={'navbar ' + (drowDown && 'active')}>
       <div className='logo'>
-        <Image src='/img/navlogo.png' width={40} height={40} alt='' />
+        <Image src='/img/navlogo.png' width={50} height={50} alt='' />
       </div>
       <div className='options'>
         <div className='menus'>
@@ -34,7 +34,13 @@ const Navbar = () => {
           setDrowDown(!drowDown);
         }}
       >
-        <Image src='/img/menu.png' width={30} height={30} alt='' />
+        <Image
+          className='burger-img'
+          src='/img/menu.png'
+          width={30}
+          height={30}
+          alt=''
+        />
       </div>
       <ul
         onClick={() => {

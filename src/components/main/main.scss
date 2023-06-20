@@ -1,52 +1,109 @@
 @import '../../app/variables';
 
 .main {
-  height: 100vh;
-  width: 100vw;
+  height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: $mainBg;
   background: $mainGradient;
   gap: 150px;
+  padding: 0 20px;
+  @include large {
+    gap: 100px;
+  }
+  @include medium {
+    gap: 75px;
+  }
   @include mobile {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+    gap: 20px;
+  }
+  @include mini {
+    height: unset;
+    justify-content: flex-start;
   }
   .logo {
     position: relative;
     width: 550px;
-    height: 5100px;
-    margin-bottom: 50px;
+    height: 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    @include large {
+      width: 440px;
+      height: 328px;
+    }
+    @include medium {
+      width: 352px;
+      height: 263px;
+    }
     @include mobile {
-      margin-top: 100px;
-      width: 450px;
-      height: 420px;
+      margin-top: 20px;
+      width: 420px;
+      height: 410px;
+    }
+    @include mini {
+      margin-top: 20px;
+      width: 250px;
+      height: 190px;
     }
   }
-  .desc {
-    height: 60%;
-    width: 30%;
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+
+  .logo-title {
+    color: white;
+    font-size: 60px;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 12px;
+    span {
+      color: $mainColor;
+    }
+    @include medium {
+      font-size: 40px;
+    }
+    @include mobile {
+      margin-top: 50px;
+      font-size: 50px;
+    }
+    @include mini {
+      font-size: 40px;
+      margin-top: 0px;
+    }
+  }
+
+  .desc {
+    max-width: 380px;
+    text-align: center;
     border-radius: 5px;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
     flex-direction: column;
-    margin-bottom: 225px;
-    // background-color: blanchedalmond;
 
     @include mobile {
       width: 80%;
       align-items: center;
     }
     h1 {
-      background-image: linear-gradient(45deg, $mainColor, #929292);
+      background-image: linear-gradient(
+        to bottom right,
+        rgb(1, 103, 114) 20%,
+        $mainColor,
+        white 55%
+      );
       background-size: 100%;
       background-clip: border-box;
       -webkit-background-clip: text;
@@ -57,10 +114,17 @@
       font-weight: normal;
       font-size: 64px;
       text-align: start;
-
+      @include medium {
+        font-size: 50px;
+      }
       @include mobile {
-        font-size: 24px;
+        font-size: 45px;
+        margin-bottom: 25px;
         text-align: center;
+      }
+      @include mini {
+        font-size: 30px;
+        margin-bottom: 35px;
       }
     }
     p {
@@ -76,11 +140,16 @@
     }
 
     .buttons {
-      // background-color: #929292;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       gap: 20px;
+    }
+  }
+  .button-demo {
+    color: $mainColor;
+    &:visited {
+      color: $mainColor;
     }
   }
   button {
@@ -92,12 +161,21 @@
     background-color: $mainColor;
     color: #000000;
     letter-spacing: 0.02cm;
+    font-size: 16px;
     a,
     a:visited {
       text-decoration: none;
       color: black;
+      width: 100%;
     }
-
+    &:last-of-type {
+      background-color: transparent;
+      border: 2px solid $mainColor;
+    }
+    @include medium {
+      width: 120px;
+      font-size: 14px;
+    }
     @include mobile {
       width: 120px;
       height: 30px;

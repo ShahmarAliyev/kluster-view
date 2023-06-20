@@ -2,15 +2,37 @@ $mainColor: #00ffff;
 $secondaryColor: azure;
 $bgGradient: linear-gradient(top to bottom, black, grey);
 $mainBg: rgba(135, 136, 148, 1);
-$mainGradient: linear-gradient(0deg, #3d3d43, rgba(1, 1, 1, 1));
-// $barBg: rgba(1, 1, 1, 0.3);
+$mainGradient: linear-gradient(0deg, rgb(35, 33, 33), rgba(1, 1, 1, 1) 70%);
 $barGr: linear-gradient(180deg, #3d3d43, #010101);
 $h1Gr: linear-gradient(180deg, #00ffff, #868f8f);
-$bgColor: #3d3d43;
+$bgColor: rgb(35, 33, 33);
 
 $width: 768px;
+$largeWidth: 1375px;
+$mediumWidth: 1200px;
+
 @mixin mobile {
   @media (max-width: #{$width}) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+@mixin mini {
+  @media (max-width: 576px) {
+    @content;
+  }
+}
+@mixin large {
+  @media (max-width: #{$largeWidth}) {
+    @content;
+  }
+}
+@mixin medium {
+  @media (max-width: #{$mediumWidth}) {
     @content;
   }
 }

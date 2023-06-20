@@ -1,19 +1,28 @@
 @import '../../app/variables';
 
 .navbar {
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 10;
-  height: 70px;
-  width: auto;
-  padding: 0px 50px;
+  height: 90px;
+  padding: 0px 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: $barGr;
-  position: relative;
+  background: black;
+  @include mini {
+    height: 70px;
+  }
+  .burger-img {
+    display: none;
+    @include mobile {
+      display: flex;
+      margin-right: 0;
+    }
+  }
   &.active {
     .burgerIcon {
-      display: none;
+      display: flex;
     }
   }
   @include mobile {
@@ -27,7 +36,6 @@
     color: $mainColor;
     position: absolute;
     border: 1px solid $mainColor;
-    right: 10px;
     list-style: none;
     display: flex;
     align-items: flex-start;
@@ -40,34 +48,43 @@
     color: $mainColor;
     padding: 5px 20px;
     border-radius: 5px;
+
+    @include mobile {
+      display: flex;
+    }
     a,
     a:visited {
       color: $mainColor;
       text-decoration: none;
+      @include mobile {
+        color: black;
+        font-size: 16px;
+        gap: 20px;
+      }
     }
     &.false {
       display: none;
     }
     &.active {
       @include mobile {
+        display: flex;
         right: 0px;
-        top: 10px;
+        top: 70px;
+        height: fit-content;
+        background-color: $mainColor;
       }
-    }
-  }
-  .burgerIcon {
-    display: none;
-    // display: flex;
-    @include mobile {
-      display: flex;
-      margin-right: 60px;
     }
   }
 
   .logo {
-    margin-left: 50px;
     cursor: pointer;
     flex: 8 1 auto;
+    Image {
+      @include mini {
+        height: 22px;
+        width: 22px;
+      }
+    }
   }
   .options {
     @include mobile {
@@ -77,28 +94,18 @@
     }
     a,
     a:visited {
-      width: 100%;
       color: $mainColor;
       text-decoration: none;
-      width: 90px;
+      margin-right: 40px;
     }
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    margin-right: 40px;
     .menus {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 10;
-      .startNav {
-        margin-right: 20px;
-      }
-    }
-    .logos {
-      img {
-        margin: 0 20px;
-      }
     }
     flex: 1 1 auto;
   }

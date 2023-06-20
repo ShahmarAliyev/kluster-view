@@ -2,8 +2,6 @@
 
 .footer {
   position: relative;
-  height: 75vh;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -11,57 +9,107 @@
   color: $secondaryColor;
   color: $mainColor;
   h2 {
-    margin-bottom: 100px;
+    margin: 120px 0 100px;
     font-weight: 600;
-    font-size: 32px;
-    color: $secondaryColor;
-    color: $mainColor;
+    font-size: 72px;
+    background-image: linear-gradient(45deg, $mainColor, white 80%);
+    background-size: 100%;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    @include mobile {
+      font-size: 55px;
+      margin-top: 0;
+    }
+    @include mini {
+      font-size: 42px;
+    }
   }
   .github {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
+    @media (max-width: 1200px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+    @include medium {
+      gap: 0px;
+    }
     @include mobile {
       display: flex;
       flex-direction: column;
-      gap: 100px;
+      gap: 40px;
+    }
+    @include mini {
+      gap: 0px;
     }
     img {
-      border-radius: 5px;
-      background-color: $secondaryColor;
+      border-radius: 15px;
+      background-color: transparent;
     }
     .person {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      margin: 0 50px;
       gap: 20px;
+      @include mini {
+        gap: 15px;
+      }
       span {
         font-weight: normal;
-        font-size: 18px;
+        font-size: 22px;
+        color: white;
+        @include mobile {
+          font-size: 32px;
+        }
       }
       .buttons {
         display: flex;
         gap: 10px;
+        @media (max-width: 1200px) {
+          margin-bottom: 50px;
+        }
       }
     }
   }
+  .image-person {
+    border: 2px solid $mainColor;
+    @media (max-width: 1200px) {
+      width: 275px;
+      height: 275px;
+    }
+    @include mobile {
+      width: 400px;
+      height: 400px;
+    }
+    @include mini {
+      width: 275px;
+      height: 275px;
+    }
+  }
   .copyright {
-    position: absolute;
-    bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 20%;
-    margin-bottom: 15px;
+    margin: 50px 0 25px;
     font-size: 14px;
     @include mobile {
       padding: 20px 0px;
       width: 80%;
       top: 0px;
       position: relative;
+      margin-top: 15px;
+    }
+    @include mini {
+      margin-top: 0;
+      font-size: 16;
     }
   }
 }
